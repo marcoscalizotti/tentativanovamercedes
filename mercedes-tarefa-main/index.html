@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mercedes</title>
+    <style>
+ 
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+
+        }
+        img {
+            width: 100%;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeFontSize('aumentar')">Aumentar</button>
+    <button onclick="changeFontSize('reduzir')">Reduzir</button><script>
+    function changeFontSize(action){
+    const elements = ['h1', 'p'];
+    elements.map(element=>{
+    
+    const selector = document.querySelector(element);
+    let value = getComputedStyle(selector).getPropertyValue('font-size');
+    value = value.replace('px', '');
+    value = action === 'aumentar' ? parseInt(value) + 1 : parseInt(value) - 1;
+    selector.style.fontSize = `${value}px`;
+    })
+    }
+    </script>
+    <header>
+        Mercedes - Modelos
+    </header>
+    <div class="container">
+        <h2>Mercedes-AMG GT</h2>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.KYXJnEPqfW6ATFmaynWXMgHaE7&pid=Api" alt="Mercedes-AMG GT">
+        <p>O Mercedes-AMG GT é um dos modelos esportivos mais icônicos da marca, com design agressivo e desempenho de alto nível.</p>
+    </div>
+    <div class="container">
+        <h2>Mercedes-Benz GLE Coupé</h2>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.im8SlbWRKHxGqoeTCpfE1QHaE7&pid=Api" alt="Mercedes-Benz GLE Coupé">
+        <p>O GLE Coupé combina luxo e potência em um SUV elegante com tecnologia de ponta.</p>
+    </div>
+</body>
+</html>

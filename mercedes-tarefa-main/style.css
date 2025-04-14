@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+}
